@@ -1,0 +1,219 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.material-symbols-outlined {
+  font-variation-settings:
+    "FILL" 0,
+    "wght" 400,
+    "GRAD" 0,
+    "opsz" 24;
+}
+@font-face {
+  font-family: "iransans";
+  src: url(./Font2/Farsi-Digits/Samim-FD.woff2);
+  font-weight: 200;
+}
+body {
+  font-family: "iransans", sans-serif;
+  background-color: #33aadd;
+}
+.container {
+  width: 90%;
+  max-width: 1200px;
+  padding-bottom: 60px;
+  background-color: #33aadd;
+  margin: 0 auto;
+}
+header {
+  width: 100%;
+  min-height: 15vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px 0;
+  gap: 15px;
+}
+header .time {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.736);
+  font-weight: bold;
+}
+header .locati {
+  position: relative;
+  width: 350px;
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+header .locati input {
+  direction: rtl;
+  width: 100%;
+  height: 40px;
+  font-size: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.595);
+  border-radius: 50px;
+  background-color: transparent;
+  color: white;
+  padding-left: 20px;
+  padding-right: 45px;
+  outline: none;
+}
+header .locati span {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.677);
+  pointer-events: none;
+}
+header .locati input::placeholder {
+  color: rgba(255, 255, 255, 0.612);
+}
+header .locati input:focus {
+  padding-right: 20px;
+}
+header .locati input:focus::placeholder {
+  color: transparent;
+}
+header .locati input:focus + span {
+  display: none;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+main table {
+  flex: 1;
+  min-width: 280px;
+  color: #ffffff96;
+  border-radius: 15px;
+  background-color: #ffffff1a;
+  border-collapse: collapse;
+}
+main table tr {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+main table tr:last-child {
+  border-bottom: none;
+}
+
+.sun {
+  width: 280px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  font-size: 20px;
+  margin: 0 auto;
+}
+img {
+  width: 100%;
+  max-width: 180px;
+}
+.mix {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.479);
+}
+
+.one,
+.two,
+.three,
+.four,
+.five,
+.six {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+}
+.one {
+  background-image: url(../image/Moon\ cloud\ fast\ wind.png);
+}
+.two {
+  background-image: url(../image/Moon\ cloud\ mid\ rain.png);
+}
+.three {
+  background-image: url(../image/Moon\ cloud\ mid\ snow.png);
+}
+.four {
+  background-image: url(../image/Moon\ fast\ wind.png);
+}
+.five {
+  background-image: url(../image/Sun\ cloud\ angled\ rain.png);
+}
+.six {
+  background-image: url(../image/Sun\ cloud\ fast\ wind.png);
+}
+
+.bold {
+  color: rgba(255, 255, 255, 0.964);
+}
+.bolder {
+  display: flex;
+  justify-content: flex-start;
+  padding-right: 9%;
+}
+.mehdi {
+  width: 100%;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background-color: #33aadd;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: sans-serif;
+  color: rgba(0, 0, 0, 0.151);
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+    padding: 10px;
+  }
+  header {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 20px;
+  }
+  header .locati {
+    width: 100%;
+  }
+  header .time {
+    width: 100%;
+    text-align: center;
+  }
+  main {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 30px;
+  }
+  main table {
+    width: 100%;
+  }
+
+  .sun {
+    width: 100%;
+  }
+}
